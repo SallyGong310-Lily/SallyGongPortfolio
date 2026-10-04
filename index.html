@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0c110f">
+<title>龚晓莉 Sally Gong — Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c110f'/%3E%3Ccircle cx='24' cy='32' r='15' fill='%23D9AE56'/%3E%3Ctext x='40' y='47' font-family='Georgia,serif' font-weight='700' font-size='38' fill='%23F7F3EC' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Sally Gong 的个人网站：海外数字营销作品集、1901 翻译班电子刊物与片羽拾光 App。">
+<link rel="preload" as="image" href="papers-bg.webp" media="(min-width:900px)">
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-latin.woff2') format('woff2');}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url('fonts/fraunces-italic-latin.woff2') format('woff2');}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/manrope-latin.woff2') format('woff2');}
+
+:root{
+  --night:#0c110f; --cream:#F7F3EC;
+  --tx:#F7F3EC; --tx2:rgba(247,243,236,.74); --tx3:rgba(247,243,236,.5);
+  --gold:#D9AE56; --gold-dim:rgba(217,174,86,.32);
+  --terra:#B4552D; --terra-l:#E58B63; --sage-l:#8FBF9E;
+  --line:rgba(247,243,236,.14);
+  --font:"Manrope",-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --serif:"Fraunces","Songti SC","Noto Serif SC",Georgia,serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;background:var(--night);}
+body{
+  position:relative;isolation:isolate;
+  font-family:var(--font);color:var(--tx);background:var(--night);
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(217,174,86,.3);}
+
+/* ---- Layer 1 · scene (outpainted paper-storm photo) ---- */
+.bg{position:fixed;inset:-3%;z-index:-4;pointer-events:none;
+  background:var(--night) url(papers-bg-sm.webp) 18% 40%/cover no-repeat;
+  transform:translate3d(calc(var(--px,0) * -16px),calc(var(--py,0) * -10px),0);
+  animation:kb 70s ease-in-out infinite alternate;will-change:transform;}
+@media (min-width:900px){.bg{background-image:url(papers-bg.webp);}}
+@keyframes kb{from{scale:1;}to{scale:1.07;}}
+
+/* ---- Layer 2 · dark veil ---- */
+.veil{position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background:
+    radial-gradient(70% 55% at 50% 40%,rgba(8,12,10,.62),rgba(8,12,10,0) 75%),
+    radial-gradient(120% 90% at 50% 45%,rgba(8,12,10,0) 45%,rgba(6,9,8,.7) 100%),
+    linear-gradient(180deg,rgba(8,12,10,.28) 0%,rgba(8,12,10,.5) 100%);}
+
+/* ---- Layer 3 · nebula particles ---- */
+.nebula{position:fixed;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none;}
+
+/* ---- Layer 4 · grain ---- */
+body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.08;mix-blend-mode:overlay;background:url(grain.png) 0 0/200px 200px;}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--terra),var(--gold));z-index:61;transform:scaleX(0);transform-origin:left;display:none;}
+@supports (animation-timeline:scroll()){.progress{display:block;animation:fill linear both;animation-timeline:scroll(root);}}
+@keyframes fill{to{transform:scaleX(1);}}
+
+/* ---- Logo · top left ---- */
+.top{position:absolute;top:0;left:0;right:0;z-index:5;padding:28px clamp(20px,4vw,48px);}
+.logo{display:inline-flex;align-items:center;gap:0;text-decoration:none;color:var(--tx);border-radius:6px;}
+.mark{position:relative;display:block;width:52px;height:58px;flex:none;}
+.disc{position:absolute;left:0;top:9px;width:40px;height:40px;border-radius:50%;background:var(--gold);opacity:.92;
+  animation:pop .9s var(--ease) .1s backwards;transition:transform .55s var(--ease);}
+.ltr{position:absolute;left:22px;top:0;font-family:var(--serif);font-optical-sizing:auto;font-weight:700;font-size:46px;line-height:58px;letter-spacing:-.02em;color:var(--cream);
+  animation:fade .8s ease .5s backwards;transition:transform .55s var(--ease);}
+.logo-name{font-size:14px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;white-space:nowrap;
+  animation:slide .9s var(--ease) .65s backwards;}
+.logo:hover .disc{transform:translate(-3px,-1px);}
+.logo:hover .ltr{transform:translateX(3px);}
+@keyframes pop{from{transform:scale(.4);opacity:0;}}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}}
+@keyframes slide{from{opacity:0;transform:translateX(-10px);}}
+@media (max-width:520px){.mark{transform:scale(.85);transform-origin:left center;margin-right:-8px;}.logo-name{font-size:12.5px;letter-spacing:.2em;}}
+
+/* ---- Hero ---- */
+.wrap{width:min(1000px,100%);padding:clamp(120px,20vh,190px) 28px 24px;text-align:center;}
+.mast{font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);}
+h1{font-family:var(--serif);font-optical-sizing:auto;font-weight:500;
+  font-size:clamp(52px,9.4vw,108px);line-height:1.02;letter-spacing:-.025em;margin-top:26px;text-shadow:0 2px 40px rgba(8,12,10,.5);}
+h1 .zh{display:block;font-size:clamp(18px,2.6vw,26px);font-style:italic;font-weight:400;
+  color:var(--tx2);margin-top:14px;letter-spacing:.1em;}
+.rule{width:64px;height:1px;background:var(--gold);margin:32px auto 0;transform-origin:center;transform:scaleX(0);animation:grow .9s var(--ease) 1.2s forwards;}
+@keyframes grow{to{transform:scaleX(1);}}
+.claim{margin:26px auto 0;max-width:50ch;font-size:clamp(16px,2.1vw,18.5px);line-height:1.8;color:var(--tx2);text-shadow:0 1px 18px rgba(8,12,10,.7);}
+.claim em{font-family:var(--serif);font-style:italic;color:var(--terra-l);font-size:1.08em;}
+
+/* ---- Marquee ---- */
+.marquee{margin:52px auto 0;overflow:hidden;border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim);padding:13px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);}
+.marquee-track{display:flex;width:max-content;animation:scroll 48s linear infinite;}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+.marquee span{font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:.05em;color:var(--tx2);padding:0 26px;white-space:nowrap;}
+.marquee span::after{content:"✦";font-style:normal;font-size:9px;color:var(--gold);margin-left:52px;vertical-align:2px;}
+@keyframes scroll{to{transform:translateX(-50%);}}
+
+/* ---- Entries ---- */
+.entries{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px;text-align:left;}
+@media (max-width:860px){.entries{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto;}}
+@property --o{syntax:"<number>";inherits:false;initial-value:0;}
+.card{--c:var(--terra-l);--mx:50%;--my:50%;--o:0;position:relative;display:flex;flex-direction:column;gap:12px;
+  background-color:rgba(247,243,236,.055);
+  background-image:radial-gradient(300px circle at var(--mx) var(--my),rgba(217,174,86,calc(var(--o) * .15)),transparent 70%);
+  -webkit-backdrop-filter:blur(14px) saturate(1.15);backdrop-filter:blur(14px) saturate(1.15);
+  border:1px solid var(--line);border-radius:4px;padding:30px 26px 26px;
+  text-decoration:none;color:var(--tx);overflow:hidden;
+  transition:transform .35s var(--ease),box-shadow .35s ease,border-color .35s ease,background-color .35s ease,--o .4s ease;}
+.card::before{content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:var(--c);transform:scaleX(.12);transform-origin:left;transition:transform .45s var(--ease);}
+.card::after{content:"";position:absolute;inset:9px;pointer-events:none;opacity:0;transition:opacity .35s ease;
+  --k:linear-gradient(var(--c),var(--c));
+  background:
+    var(--k) 0 0/9px 1px no-repeat, var(--k) 0 0/1px 9px no-repeat,
+    var(--k) 100% 0/9px 1px no-repeat, var(--k) 100% 0/1px 9px no-repeat,
+    var(--k) 0 100%/9px 1px no-repeat, var(--k) 0 100%/1px 9px no-repeat,
+    var(--k) 100% 100%/9px 1px no-repeat, var(--k) 100% 100%/1px 9px no-repeat;}
+.card:hover,.card:focus-visible{--o:1;transform:translateY(-4px);border-color:var(--c);background-color:rgba(247,243,236,.085);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);outline:none;}
+.card:hover::before,.card:focus-visible::before{transform:scaleX(1);}
+.card:hover::after,.card:focus-visible::after{opacity:.75;}
+.card .no{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--tx3);transition:color .3s ease;}
+.card:hover .no{color:var(--c);}
+.card .tag{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--c);}
+.card .name{font-family:var(--serif);font-weight:500;font-size:25px;line-height:1.2;letter-spacing:-.01em;}
+.card .desc{font-size:13.5px;line-height:1.8;color:var(--tx2);flex:1;}
+.card .go{margin-top:8px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--c);
+  display:inline-flex;gap:8px;align-items:center;}
+.card .go i{font-style:normal;display:inline-block;transition:transform .3s var(--ease);}
+.card:hover .go i{transform:translateX(5px);}
+.card.wip{background-color:rgba(247,243,236,.025);border-style:dashed;}
+.card.wip:hover{border-style:solid;}
+.card.wip .no{display:flex;justify-content:space-between;align-items:center;}
+.badge{font-family:var(--font);font-style:normal;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--sage-l);border:1px solid rgba(143,191,158,.45);border-radius:99px;padding:3px 9px;}
+
+/* ---- Footer ---- */
+.foot{width:min(1000px,100%);margin-top:72px;padding:26px 28px 44px;text-align:center;
+  border-top:1px solid var(--gold-dim);font-size:12.5px;color:var(--tx3);line-height:1.9;}
+.foot a{color:var(--tx2);text-decoration:none;letter-spacing:.04em;padding-bottom:2px;
+  background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .4s var(--ease),color .3s ease;}
+.foot a:hover{color:var(--gold);background-size:100% 1px;}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:4px;}
+.card:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+/* ---- Entrance ---- */
+.rise{animation:rise .9s var(--ease) backwards;}
+@keyframes rise{from{opacity:0;transform:translateY(14px);}}
+.mast.rise{animation-delay:.5s;}
+h1.rise{animation:reveal 1.2s var(--ease) .7s backwards;}
+@keyframes reveal{from{clip-path:inset(0 0 100% 0);opacity:0;transform:translateY(18px);}to{clip-path:inset(-20% -10% -20% -10%);}}
+.claim.rise{animation-delay:1.35s;}
+.marquee.rise{animation-delay:1.5s;}
+.entries .card:nth-child(1){animation-delay:1.7s;}
+.entries .card:nth-child(2){animation-delay:1.85s;}
+.entries .card:nth-child(3){animation-delay:2s;}
+.foot.rise{animation-delay:2.2s;}
+
+@media (prefers-reduced-motion:reduce){
+  .rule,.rise,h1.rise,.disc,.ltr,.logo-name{animation:none;opacity:1;transform:none;clip-path:none;}
+  .rule{transform:none;}
+  .bg,.marquee-track,.progress{animation:none;}
+  .bg{transform:none;}
+  .marquee{overflow-x:auto;}
+  .card,.card::before,.card .go i,.disc,.ltr{transition:none;}
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<div class="veil" aria-hidden="true"></div>
+<canvas class="nebula" aria-hidden="true"></canvas>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="logo" href="index.html" aria-label="Sally Gong — 首页">
+    <span class="mark" aria-hidden="true"><span class="disc"></span><span class="ltr">S</span></span>
+    <span class="logo-name">Sally Gong</span>
+  </a>
+</header>
+
+<main class="wrap">
+  <p class="mast rise">Portfolio · 2026</p>
+  <h1 class="rise">Sally Gong<span class="zh">龚晓莉</span></h1>
+  <div class="rule" aria-hidden="true"></div>
+  <p class="claim rise">上海外国语大学英语语言文学硕士，做海外数字营销与内容运营。<br>在这里，<em>三份作品，三种做事的方式。</em></p>
+
+  <div class="marquee rise" aria-hidden="true"><div class="marquee-track"><span>Creator Growth</span><span>Klaviyo EDM</span><span>Exhibition PR</span><span>DTC · AIGC Ops</span><span>Class Archive</span><span>Flutter App</span><span>Creator Growth</span><span>Klaviyo EDM</span><span>Exhibition PR</span><span>DTC · AIGC Ops</span><span>Class Archive</span><span>Flutter App</span></div></div>
+
+  <nav class="entries" aria-label="作品入口">
+    <a class="card rise" href="internship/index.html" style="--c:var(--terra-l)">
+      <span class="no">01</span>
+      <span class="tag">Internship · 实习作品集</span>
+      <span class="name">Robooter 数字营销</span>
+      <span class="desc">达人拓展 · 竞品洞察 · 展会营销 · 邮件体系 · 独立站 AIGC Ops。每一页都是真实交付，中英双语。</span>
+      <span class="go">进入作品集 <i>→</i></span>
+    </a>
+    <a class="card rise" href="class-archive/index.html" style="--c:var(--gold)">
+      <span class="no">02</span>
+      <span class="tag">Class Archive · 班级运营</span>
+      <span class="name">1901 翻译班电子刊物</span>
+      <span class="desc">把公众号图文迁成一本会随季节变色的档案：照片印相条、16mm 放映盒与手写边注。</span>
+      <span class="go">翻开档案 <i>→</i></span>
+    </a>
+    <a class="card rise" href="app/index.html" style="--c:var(--sage-l)">
+      <span class="no">03</span>
+      <span class="tag">App · 个人项目</span>
+      <span class="name">片羽拾光 Fragments of Light</span>
+      <span class="desc">一款用 Flutter 开发的碎片记录 App：记录句子、灵感与摘录，按分类整理、回顾，并支持 PDF 导出。</span>
+      <span class="go">查看 Web 版 <i>→</i></span>
+    </a>
+  </nav>
+</main>
+
+<footer class="foot rise">
+  <span>Sally Gong · Class of 2027 · Shanghai</span><br>
+  <a href="mailto:sallygong310@gmail.com">sallygong310@gmail.com</a>
+</footer>
+
+<script>
+/* card spotlight + scene parallax */
+(function(){
+  if(!matchMedia('(hover:hover) and (prefers-reduced-motion:no-preference)').matches) return;
+  document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('pointermove',function(e){
+      var r=c.getBoundingClientRect();
+      c.style.setProperty('--mx',(e.clientX-r.left)+'px');
+      c.style.setProperty('--my',(e.clientY-r.top)+'px');
+    });
+  });
+  var root=document.documentElement,pending=false,nx=0,ny=0;
+  addEventListener('pointermove',function(e){
+    nx=e.clientX/innerWidth-.5;ny=e.clientY/innerHeight-.5;
+    if(pending)return;pending=true;
+    requestAnimationFrame(function(){pending=false;root.style.setProperty('--px',nx.toFixed(3));root.style.setProperty('--py',ny.toFixed(3));});
+  },{passive:true});
+})();
+
+/* nebula particles */
+(function(){
+  var cv=document.querySelector('.nebula');if(!cv||!cv.getContext)return;
+  var ctx=cv.getContext('2d'),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var W=0,H=0,dpr=1,parts=[],blobs=[],mx=-9999,my=-9999,raf=0,rt=0;
+  var COL=['217,174,86','229,139,99','143,191,158','247,243,236'];
+  function glow(rgb,s){var c=document.createElement('canvas');c.width=c.height=s;var g=c.getContext('2d'),r=g.createRadialGradient(s/2,s/2,0,s/2,s/2,s/2);
+    r.addColorStop(0,'rgba('+rgb+',1)');r.addColorStop(.4,'rgba('+rgb+',.3)');r.addColorStop(1,'rgba('+rgb+',0)');g.fillStyle=r;g.fillRect(0,0,s,s);return c;}
+  var dot=COL.map(function(c){return glow(c,64);}),cloud=COL.slice(0,3).map(function(c){return glow(c,256);});
+  function init(){
+    var n=Math.round(Math.min(230,Math.max(70,W*H/8200)));parts=[];
+    for(var i=0;i<n;i++){var k=Math.random();
+      parts.push({x:Math.random()*W,y:Math.random()*H,r:.5+Math.pow(Math.random(),3)*2.3,c:k<.5?3:k<.78?0:k<.9?1:2,
+        a:.3+Math.random()*.6,ph:Math.random()*6.28,sp:.12+Math.random()*.45,vx:0,vy:0});}
+    blobs=[];var cfg=[[.16,.14,0,520,.22],[.82,.2,2,560,.17],[.55,.55,1,460,.12],[.3,.85,2,520,.14],[.9,.8,1,420,.14],[.45,.1,0,380,.13]];
+    cfg.forEach(function(b,i){blobs.push({x:b[0],y:b[1],c:b[2],r:Math.min(b[3],Math.max(W,H)*.5),a:b[4],p:i*1.9,s:.00005+i*.00001,ox:40+i*8,oy:30+i*6});});
+  }
+  function resize(){
+    dpr=Math.min(window.devicePixelRatio||1,2);W=innerWidth;H=innerHeight;
+    cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);init();if(reduce)frame(0);
+  }
+  function frame(T){
+    ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);ctx.globalCompositeOperation='lighter';
+    for(var i=0;i<blobs.length;i++){var b=blobs[i];
+      ctx.globalAlpha=b.a*(.75+.25*Math.sin(T*.0003+b.p));
+      var x=b.x*W+Math.cos(T*b.s+b.p)*b.ox,y=b.y*H+Math.sin(T*b.s*1.3+b.p)*b.oy;
+      ctx.drawImage(cloud[b.c],x-b.r,y-b.r,b.r*2,b.r*2);}
+    for(var j=0;j<parts.length;j++){var p=parts[j];
+      var ang=(Math.sin(p.x*.0021+T*.00006)+Math.cos(p.y*.0026-T*.00005))*Math.PI;
+      p.vx+=(Math.cos(ang)*p.sp-p.vx)*.02;p.vy+=(Math.sin(ang)*p.sp*.6-.04-p.vy)*.02;
+      var dx=p.x-mx,dy=p.y-my,d2=dx*dx+dy*dy;
+      if(d2<22000){var d=Math.sqrt(d2)+1,f=(1-d2/22000)*.35;p.vx+=dx/d*f;p.vy+=dy/d*f;}
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<-20)p.x=W+20;else if(p.x>W+20)p.x=-20;if(p.y<-20)p.y=H+20;else if(p.y>H+20)p.y=-20;
+      ctx.globalAlpha=p.a*(.55+.45*Math.sin(T*.0012*(1+p.sp)+p.ph));
+      var s=p.r*6;ctx.drawImage(dot[p.c],p.x-s,p.y-s,s*2,s*2);}
+    ctx.globalAlpha=1;ctx.globalCompositeOperation='source-over';
+    if(!reduce)raf=requestAnimationFrame(frame);
+  }
+  resize();if(!reduce)raf=requestAnimationFrame(frame);
+  addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(resize,150);});
+  if(!reduce&&matchMedia('(hover:hover)').matches){
+    addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;},{passive:true});
+    document.addEventListener('pointerleave',function(){mx=my=-9999;});
+  }
+})();
+</script>
+</body>
+</html>

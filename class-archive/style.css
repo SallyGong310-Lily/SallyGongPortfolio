@@ -1,0 +1,380 @@
+/* ==================================================== */
+/* style.css：独立样式与气象温标系统 */
+/* 温标：每季节 14 个 token，新条目一律 var(--*)，禁硬编码 */
+/* ==================================================== */
+
+:root {
+  --desk-grad-start: rgba(255, 255, 255, 0.75);
+  --desk-grad-end: #DFCFC0;
+  --desk-bg: #EAE0D5;
+  --sheet-bg: #FDFBF7;
+  --ink: #221814;
+  --muted: #7A695C;
+  --rule: #E4D8CB;
+  --accent: #9A3412;
+  --highlight: rgba(254, 215, 170, 0.55);
+  --film-bg: #1C1714;
+  --margin-bg: #FAF3E7;
+  --margin-rule: #D1C3AD;
+  --photo-frame-bg: #EBE5DB;
+  --photo-mat: #E7E5E4;
+}
+
+body.season-spring {
+  --desk-grad-start: rgba(255, 255, 255, 0.8);
+  --desk-grad-end: #D9DFD7;
+  --desk-bg: #E6EDE4;
+  --sheet-bg: #FCFCF9;
+  --ink: #18221B;
+  --muted: #6B756C;
+  --rule: #DCE3DA;
+  --accent: #3F624D;
+  --highlight: rgba(220, 252, 231, 0.6);
+  --film-bg: #141A16;
+  --margin-bg: #EFF4EC;
+  --margin-rule: #C3CFC0;
+  --photo-frame-bg: #E9EEE6;
+  --photo-mat: #DDE3DA;
+}
+
+body.season-summer {
+  --desk-grad-start: rgba(255, 255, 255, 0.85);
+  --desk-grad-end: #CCD7D7;
+  --desk-bg: #DCE5E5;
+  --sheet-bg: #F8FAFA;
+  --ink: #111E24;
+  --muted: #627279;
+  --rule: #D4DEE0;
+  --accent: #155E75;
+  --highlight: rgba(207, 250, 254, 0.5);
+  --film-bg: #12191D;
+  --margin-bg: #EDF4F5;
+  --margin-rule: #BED0D3;
+  --photo-frame-bg: #E8EEEE;
+  --photo-mat: #D8E0E1;
+}
+
+body.season-autumn {
+  --desk-grad-start: rgba(255, 255, 255, 0.75);
+  --desk-grad-end: #DFCFC0;
+  --desk-bg: #EAE0D5;
+  --sheet-bg: #FDFBF7;
+  --ink: #221814;
+  --muted: #7A695C;
+  --rule: #E4D8CB;
+  --accent: #9A3412;
+  --highlight: rgba(254, 215, 170, 0.55);
+  --film-bg: #1C1714;
+  --margin-bg: #FAF3E7;
+  --margin-rule: #D1C3AD;
+  --photo-frame-bg: #EBE5DB;
+  --photo-mat: #E7E5E4;
+}
+
+body.season-winter {
+  --desk-grad-start: rgba(255, 255, 255, 0.8);
+  --desk-grad-end: #D2D5D9;
+  --desk-bg: #DFE2E6;
+  --sheet-bg: #F8F9FA;
+  --ink: #181E24;
+  --muted: #67717C;
+  --rule: #D8DCE0;
+  --accent: #334155;
+  --highlight: rgba(226, 232, 240, 0.7);
+  --film-bg: #16191D;
+  --margin-bg: #F0F2F5;
+  --margin-rule: #C9D0D9;
+  --photo-frame-bg: #E9ECEF;
+  --photo-mat: #DADEE2;
+}
+
+body {
+  background-color: var(--desk-bg);
+  background-image:
+    radial-gradient(120% 90% at 20% 0%, var(--desk-grad-start) 0%, transparent 50%, var(--desk-grad-end) 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: 'Newsreader', 'Noto Serif SC', Georgia, serif;
+  font-feature-settings: "palt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 1.2s cubic-bezier(0.16, 1, 0.3, 1), color 1.2s ease;
+}
+
+/* ---------- 排印规范（中西混排微基线） ---------- */
+
+.prose-editorial {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  hanging-punctuation: first last;
+  word-break: break-word;
+  line-height: 1.88;
+}
+
+.prose-editorial img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose-editorial h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: var(--ink);
+}
+
+/* 自动识别的小标题：无衬线标签体，与衬线正文明确区分 */
+.prose-editorial h3 {
+  margin: 0;
+  font-family: 'Inter', 'Noto Serif SC', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-align: left;
+  color: var(--accent);
+}
+
+/* ---------- 纸张与裁切 ---------- */
+
+.editorial-sheet {
+  background-color: var(--sheet-bg);
+  border: 1px solid var(--rule);
+  box-shadow:
+    0 1px 2px rgba(25, 20, 15, 0.03),
+    0 14px 34px -4px rgba(25, 20, 15, 0.05),
+    0 32px 64px -12px rgba(25, 20, 15, 0.07);
+  transition: background-color 1.2s ease, border-color 1.2s ease;
+}
+
+@media (max-width: 640px) {
+  .editorial-sheet {
+    border-left: 3px solid var(--rule);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.crop-mark-tl { top: -6px; left: -6px; border-top: 1px solid var(--muted); border-left: 1px solid var(--muted); }
+.crop-mark-tr { top: -6px; right: -6px; border-top: 1px solid var(--muted); border-right: 1px solid var(--muted); }
+.crop-mark-bl { bottom: -6px; left: -6px; border-bottom: 1px solid var(--muted); border-left: 1px solid var(--muted); }
+.crop-mark-br { bottom: -6px; right: -6px; border-bottom: 1px solid var(--muted); border-right: 1px solid var(--muted); }
+
+.washi-tape {
+  background: rgba(240, 235, 226, 0.88);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  border-left: 2px dashed rgba(185, 178, 168, 0.65);
+  border-right: 2px dashed rgba(185, 178, 168, 0.65);
+}
+
+/* ---------- 手写边注（Caveat） ---------- */
+
+.margin-note {
+  background: var(--margin-bg);
+  border-left: 2px solid var(--margin-rule);
+  cursor: pointer;
+}
+
+/* 点击贴纸：轻颤一下（可重复触发） */
+@keyframes noteShake {
+  0%, 100% { transform: rotate(0deg) translateX(0); }
+  20% { transform: rotate(-2deg) translateX(-2px); }
+  40% { transform: rotate(2.2deg) translateX(2px); }
+  60% { transform: rotate(-1.6deg) translateX(-1px); }
+  80% { transform: rotate(1deg) translateX(1px); }
+}
+.margin-note-shake {
+  animation: noteShake 0.45s ease-in-out;
+}
+
+/* ---------- 暗房滤镜 ---------- */
+
+.darkroom-img {
+  filter: grayscale(35%) contrast(92%) brightness(98%);
+  transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s ease;
+}
+.group:hover .darkroom-img,
+.darkroom-img:hover {
+  filter: grayscale(0%) contrast(100%) brightness(100%);
+  transform: scale(1.015);
+}
+
+/* ---------- 16mm 现场放映盒 ---------- */
+
+.film-projector-frame {
+  background: var(--film-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.projector-stage video.projector-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projector-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.projector-play:hover { transform: translate(-50%, -50%) scale(1.1); }
+.projector-stage.is-playing .projector-play { opacity: 0; }
+.projector-stage:hover .projector-play { opacity: 1; }
+
+.projector-caption {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.75rem;
+  color: #d6d3d1;
+  font-weight: 300;
+  font-family: Georgia, 'Noto Serif SC', serif;
+  pointer-events: none;
+}
+
+.projector-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a8a29e;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- 接触印相底片条 ---------- */
+
+.contact-sheet-strip {
+  border: 1px solid var(--rule);
+  background: rgba(0, 0, 0, 0.015);
+}
+
+.contact-sheet-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frame-empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  background: var(--photo-frame-bg);
+}
+
+/* ---------- 荧光高亮 ---------- */
+
+.ink-highlight {
+  background: linear-gradient(104deg, transparent 0.9%, var(--highlight) 2.4%, var(--highlight) 98%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  padding: 0 3px;
+}
+.ink-highlight.highlight-active {
+  background-size: 100% 100%;
+}
+
+/* ---------- 悬浮微缩卡 ---------- */
+
+.footnote-hover {
+  border-bottom: 1.5px dotted var(--accent);
+  cursor: help;
+  position: relative;
+}
+.footnote-popup {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) rotate(-1.5deg);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.footnote-hover:hover .footnote-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) rotate(-1.5deg);
+}
+
+/* ---------- 音频胶囊 ---------- */
+
+@keyframes waveBar {
+  0%, 100% { height: 3px; }
+  50% { height: 16px; }
+}
+.audio-bar {
+  animation: waveBar 1.2s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.audio-playing .audio-bar {
+  animation-play-state: running;
+}
+
+/* ---------- 馆长来信卡片（信封开启） ---------- */
+
+.curator-envelope {
+  perspective: 800px;
+  animation: cardPop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.15) forwards;
+}
+@keyframes cardPop {
+  from { transform: translateY(12px) rotate(1.4deg) scale(0.96); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.curator-flap {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  background: var(--margin-bg);
+  border-bottom: 1px solid var(--margin-rule);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  animation: flapOpen 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.15s forwards;
+  z-index: 5;
+}
+@keyframes flapOpen {
+  0% { transform: rotateX(0deg); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: rotateX(-172deg); opacity: 0; }
+}
+.curator-note-body {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: noteRise 0.45s ease-out 0.5s forwards;
+}
+@keyframes noteRise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #season-canvas { display: none !important; }
+  .darkroom-img, .ink-highlight { transition: none !important; }
+  .ink-highlight { background-size: 100% 100% !important; }
+  .projector-play { transition: none !important; }
+  .margin-note-shake { animation: none !important; }
+  .curator-envelope, .curator-flap, .curator-note-body { animation: none !important; }
+  .curator-flap { opacity: 0 !important; }
+  .curator-note-body { opacity: 1 !important; transform: none !important; }
+}

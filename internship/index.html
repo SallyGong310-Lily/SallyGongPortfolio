@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='26' fill='%23F7F3EC' stroke='%23C99B3F' stroke-opacity='.6'/%3E%3Ccircle cx='24' cy='21' r='2.6' fill='%23232D26'/%3E%3Ccircle cx='34' cy='17' r='1.8' fill='%23232D26'/%3E%3Ccircle cx='42' cy='24' r='2.2' fill='%23232D26'/%3E%3Ccircle cx='19' cy='31' r='1.6' fill='%23232D26'/%3E%3Ccircle cx='46' cy='33' r='2.4' fill='%23232D26'/%3E%3Ccircle cx='25' cy='43' r='2' fill='%23232D26'/%3E%3Ccircle cx='36' cy='45' r='2.5' fill='%23232D26'/%3E%3Ccircle cx='44' cy='41' r='1.5' fill='%23232D26'/%3E%3Ccircle cx='29' cy='25' r='1.4' fill='%23C99B3F'/%3E%3Ccircle cx='41' cy='35' r='1.4' fill='%23B4552D'/%3E%3Ccircle cx='21' cy='38' r='1.3' fill='%23C99B3F'/%3E%3Ccircle cx='26' cy='30' r='4.2' fill='%23FFFFFF'/%3E%3Ccircle cx='38' cy='30' r='4.2' fill='%23FFFFFF'/%3E%3Ccircle cx='27.2' cy='30.6' r='2.1' fill='%23232D26'/%3E%3Ccircle cx='39.2' cy='30.6' r='2.1' fill='%23232D26'/%3E%3Ccircle cx='26.4' cy='29.7' r='.7' fill='%23FFFFFF'/%3E%3Ccircle cx='38.4' cy='29.7' r='.7' fill='%23FFFFFF'/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>龚晓莉 Sally Gong — 个人作品集 · Portfolio</title>
+<meta name="description" content="Sally Gong — 海外数字营销作品集（Robooter 实习）。English / 中文 双语入口。">
+<style>
+@font-face{
+  font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;
+  src:url('fonts/fraunces-latin.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;
+  src:url('fonts/fraunces-italic-latin.woff2') format('woff2');
+}
+:root{
+  --cream:#F7F3EC; --card:#FFFDF8; --ink:#232D26; --ink2:#5D6B5F; --ink3:#8F9A8D;
+  --terra:#B4552D; --gold:#C99B3F; --gold-dim:rgba(176,141,62,.45);
+  --font:"Manrope",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --serif:"Fraunces","Songti SC",Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--font);background:var(--cream);color:var(--ink);min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;-webkit-font-smoothing:antialiased;}
+.wrap{width:min(880px,100%);padding:72px 24px 40px;text-align:center;}
+.mast{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);}
+h1{font-family:var(--serif);font-optical-sizing:auto;font-weight:500;
+  font-size:clamp(56px,10vw,104px);line-height:1.02;letter-spacing:-.02em;margin-top:26px;}
+h1 .zh{display:block;font-size:clamp(20px,3vw,28px);font-style:italic;font-weight:400;
+  color:var(--ink2);margin-top:14px;letter-spacing:.06em;}
+.rule{width:64px;height:1px;background:var(--gold);margin:34px auto 0;}
+.claim{margin-top:30px;font-size:clamp(16px,2.2vw,19px);line-height:1.7;color:var(--ink2);max-width:52ch;margin-left:auto;margin-right:auto;}
+.claim em{font-family:var(--serif);font-style:italic;color:var(--terra);font-size:1.08em;}
+.meta{margin-top:22px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);}
+.langs{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px;text-align:left;}
+@media (max-width:680px){.langs{grid-template-columns:1fr;}}
+.lang-card{display:flex;flex-direction:column;gap:10px;background:var(--card);
+  border:1px solid rgba(35,45,38,.12);border-radius:4px;padding:36px 32px;text-decoration:none;color:var(--ink);
+  transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease,border-color .3s ease;}
+.lang-card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(35,45,38,.12);border-color:var(--gold-dim);}
+.lang-card .tag{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);}
+.lang-card .name{font-family:var(--serif);font-weight:500;font-size:26px;letter-spacing:-.01em;}
+.lang-card .desc{font-size:13.5px;color:var(--ink2);line-height:1.75;}
+.lang-card .go{margin-top:10px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);}
+.foot{width:min(880px,100%);padding:26px 24px 44px;text-align:center;
+  border-top:1px solid var(--gold-dim);font-size:12.5px;color:var(--ink3);}
+.foot .mail{display:inline-block;margin-top:6px;color:var(--ink2);text-decoration:none;letter-spacing:.04em;}
+.foot .mail:hover{color:var(--terra);}
+@media (prefers-reduced-motion:reduce){.lang-card{transition:none;}.lang-card:hover{transform:none;}}
+
+/* ===== 背景小向导（借鉴 cloudstudio.es 的 mascot） =====
+   后层装饰：居中、约 ½ 视口、低透明度，不挡文字不接交互 */
+#pet-bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.32;}
+.wrap,.foot{position:relative;z-index:1;}
+@media print{#pet-bg{display:none !important;}}
+</style>
+</head>
+<body>
+  <canvas id="pet-bg" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="mast">Portfolio · 2026</p>
+    <h1>Sally Gong<span class="zh">龚晓莉 · 全球数字营销</span></h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="claim">I make repetitive marketing work <em>run itself.</em><br>Robooter（智能出行）三个月实习 · 每一页都是真实交付。</p>
+    <p class="meta">Creator Growth · Klaviyo EDM · Exhibition PR · DTC · AIGC Ops</p>
+    <div class="langs">
+      <a class="lang-card" href="portfolio_web_cn.html" lang="zh-CN">
+        <span class="tag">中文版</span>
+        <span class="name">中文作品集</span>
+        <span class="desc">达人拓展 · 竞品洞察 · 展会营销 · 邮件体系 · 独立站 AIGC Ops</span>
+        <span class="go">进入作品集 →</span>
+      </a>
+      <a class="lang-card" href="portfolio_web.html" lang="en">
+        <span class="tag">English</span>
+        <span class="name">English Portfolio</span>
+        <span class="desc">Creator growth · Competitor insights · Exhibition PR · EDM · DTC AIGC Ops</span>
+        <span class="go">Read the portfolio →</span>
+      </a>
+    </div>
+  </div>
+  <div class="foot">
+    <span>Sally Gong · Class of 2027 · Shanghai</span><br>
+    <a class="mail" href="mailto:sallygong310@gmail.com">sallygong310@gmail.com</a>
+  </div>
+  <script src="pet-nebula.js"></script>
+<script>
+/* ===== 背景星云：渲染引擎在 pet-nebula.js，此处仅传页面配置 ===== */
+(function(){
+  "use strict";
+  if (!window.PetNebula) return;
+  window.PetNebula.initBackground({
+    canvasId: "pet-bg",
+    sizeRatio: 0.58,
+    meteor: true,
+    overrides: { hazeCount: 6, starCount: 4, dustCount: 20, spinBase: 0.30, gravityRadius: 320, gravityMax: 6 },
+    colorVars: { ink:["--ink","#232D26"], cream:["--cream","#F7F3EC"], terra:["--terra","#B4552D"], gold:["--gold","#C99B3F"] }
+  });
+})();
+</script>
+  <script>
+  (function(){
+    try{
+      var zh = /^zh\b/i.test(navigator.language || "");
+      document.documentElement.lang = zh ? "zh-CN" : "en";
+      var cards = document.querySelectorAll(".lang-card");
+      if(zh && cards[1] && cards[1].parentElement){ cards[1].parentElement.insertBefore(cards[1], cards[0]); }
+    }catch(e){}
+  })();
+  </script>
+</body>
+</html>

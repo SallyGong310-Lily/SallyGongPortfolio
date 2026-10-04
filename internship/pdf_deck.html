@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio Deck 16:9</title>
+<style>
+@font-face{font-family:'Manrope';src:url('fonts/manrope-latin.woff2') format('woff2');font-weight:200 800;font-style:normal;}
+:root{--ink:#1D1D1F;--ink2:#6E6E73;--ink3:#86868B;--blue:#0071E3;--paper:#F5F5F7;--card:#FFFFFF;--divider:rgba(0,0,0,.1);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#777;font-family:'Manrope',-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:var(--ink);zoom:2;}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;background:#fff;padding:34px 44px 30px;}
+.slide.dark{background:#05050D;color:#F5F5F7;}
+.krow{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.kicker{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;font-family:'Manrope','PingFang SC',sans-serif;}
+.pno{font-size:10px;color:var(--ink3);letter-spacing:.08em;font-family:'Manrope',monospace;}
+.dark .pno{color:rgba(245,245,247,.5);}
+h1{font-size:52px;font-weight:700;letter-spacing:-.01em;line-height:1.12;}
+h2{font-size:27px;font-weight:700;letter-spacing:-.01em;line-height:1.2;}
+h2 .accent{color:var(--blue);}
+.en{font-style:italic;font-size:12.5px;color:var(--ink2);margin-top:5px;font-family:Georgia,'Times New Roman',serif;}
+.foot{position:absolute;left:44px;right:44px;bottom:12px;display:flex;justify-content:space-between;
+  font-size:9px;letter-spacing:.1em;color:var(--ink3);text-transform:uppercase;font-family:'Manrope',sans-serif;}
+.dark .foot{color:rgba(245,245,247,.45);}
+.banner{background:var(--ink);color:#fff;border-radius:10px;padding:10px 16px;font-size:11.5px;line-height:1.5;}
+.banner b{color:#FFD60A;}
+.card{background:var(--card);border:1px solid var(--divider);border-radius:12px;padding:12px 14px;}
+.chip{border:1px solid var(--divider);border-radius:10px;padding:8px 10px;background:var(--paper);}
+.imgbox{border-radius:10px;overflow:hidden;border:1px solid var(--divider);background:#fff;}
+.imgbox img{width:100%;height:100%;object-fit:cover;display:block;}
+.cap{font-size:9px;color:var(--ink3);margin-top:4px;line-height:1.4;text-align:center;}
+.tag{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:.1em;color:var(--blue);
+  text-transform:uppercase;border:1px solid rgba(0,113,227,.35);border-radius:4px;padding:2px 6px;}
+ul.b{list-style:none;font-size:10.5px;line-height:1.55;color:var(--ink);}
+ul.b li{padding-left:12px;position:relative;margin-bottom:5px;}
+ul.b li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:2px;border-radius:1px;background:var(--blue);}
+.mono{font-family:'SF Mono',ui-monospace,Menlo,monospace;}
+</style>
+</head>
+<body>
+
+<!-- ============ 01 封面 ============ -->
+<section class="slide dark" id="s1" style="padding:40px 52px;">
+  <div style="position:absolute;inset:0;background:radial-gradient(48% 62% at 78% 96%, rgba(120,60,220,.42), transparent 70%),radial-gradient(40% 50% at 90% 70%, rgba(60,80,220,.25), transparent 70%);"></div>
+  <div style="position:relative;">
+    <div class="krow">
+      <span style="font-size:9.5px;letter-spacing:.18em;border:1px solid rgba(245,245,247,.35);border-radius:999px;padding:4px 12px;font-family:'Manrope',sans-serif;">GLOBAL DIGITAL MARKETING PORTFOLIO · 2026</span>
+      <span class="pno">01 / 13</span>
+    </div>
+    <h1 style="margin-top:26px;">龚晓莉 Sally Gong</h1>
+    <div style="font-size:38px;font-weight:700;line-height:1.15;margin-top:2px;">海外数字营销<span style="background:linear-gradient(90deg,#7D7AFF,#BF5AF2);-webkit-background-clip:text;background-clip:text;color:transparent;">实战作品集</span></div>
+    <div class="en" style="color:rgba(245,245,247,.65);">Hands-on global marketing at Robooter — smart mobility, Aug–Oct 2026</div>
+    <div style="margin-top:12px;font-size:14.5px;">出海营销的扎实执行者：把「人做的事」变成「系统跑得动的事」。</div>
+    <div style="font-size:10.5px;color:rgba(245,245,247,.55);margin-top:4px;">Three months of real pipelines: creators, emails, press releases and translation — built to keep running after I left.</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px;">
+      <div style="border:1px solid rgba(245,245,247,.16);border-radius:10px;padding:10px 12px;background:rgba(245,245,247,.05);">
+        <div style="font-size:11.5px;font-weight:700;">创作者增长 Creator Growth</div>
+        <div style="font-size:9.5px;line-height:1.5;color:rgba(245,245,247,.62);margin-top:4px;">法国 11 位垂直 KOL 建联与产品置换；Heepsy 千级达人池 + GPT 智能体初筛 + 飞书 CRM 流转</div>
+      </div>
+      <div style="border:1px solid rgba(245,245,247,.16);border-radius:10px;padding:10px 12px;background:rgba(245,245,247,.05);">
+        <div style="font-size:11.5px;font-weight:700;">DTC 独立站与留存</div>
+        <div style="font-size:9.5px;line-height:1.5;color:rgba(245,245,247,.62);margin-top:4px;">Shopify 美区新旧品迁移与资产归档 SOP；Klaviyo 全生命周期 Flows（Welcome / Browse / Cart / Checkout）</div>
+      </div>
+      <div style="border:1px solid rgba(245,245,247,.16);border-radius:10px;padding:10px 12px;background:rgba(245,245,247,.05);">
+        <div style="font-size:11.5px;font-weight:700;">展会公关与内容</div>
+        <div style="font-size:9.5px;line-height:1.5;color:rgba(245,245,247,.62);margin-top:4px;">REHACARE / H.C.R. 英文新闻稿 + EIN Presswire 分发；SEO+GEO 双优化；波士顿试驾战役</div>
+      </div>
+      <div style="border:1px solid rgba(245,245,247,.16);border-radius:10px;padding:10px 12px;background:rgba(245,245,247,.05);">
+        <div style="font-size:11.5px;font-weight:700;">语言与本地化 LangOps</div>
+        <div style="font-size:9.5px;line-height:1.5;color:rgba(245,245,247,.62);margin-top:4px;">英语专八优秀 / 法语专四优秀 / CATTI 三级笔译；「AI 初译 + 双语校审 + 母语质检」三审交付</div>
+      </div>
+    </div>
+    <div style="margin-top:20px;font-size:10px;color:rgba(245,245,247,.5);font-family:'Manrope',monospace;letter-spacing:.04em;">Heepsy&nbsp;&nbsp;ChatGPT 定制智能体&nbsp;&nbsp;飞书多维表格&nbsp;&nbsp;Shopify Admin&nbsp;&nbsp;Klaviyo · Liquid&nbsp;&nbsp;EIN Presswire&nbsp;&nbsp;Zendesk&nbsp;&nbsp;Trados</div>
+    <div style="position:absolute;left:0;right:0;bottom:-104px;text-align:right;font-size:10px;color:rgba(245,245,247,.55);">上海外国语大学 · 英语语言文学硕士（2027 届） ｜ 邮箱 sallygong310@gmail.com ｜ 电话 (+86) 173-6170-8913</div>
+  </div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>01 / 13</span></div>
+</section>
+
+<!-- ============ 02 竞品复盘（上） ============ -->
+<section class="slide" id="s2">
+  <div class="krow"><span class="kicker">Competitive Intelligence · I</span><span class="pno">02 / 13</span></div>
+  <h2>竞品复盘（上）：卖轮椅的两种生意</h2>
+  <div class="en">Two Ways to Sell a Wheelchair — CRT Prescription-Driven vs. MaaS Consumer Mobility</div>
+  <div class="banner" style="margin-top:12px;">核心结论：康复出行的竞争本质不在硬件参数，而在「<b>临床处方准入 × 医保报销通道 × 生活方式心智</b>」的组合拳。 Competition in mobility is defined by clinical access, reimbursement pathways and lifestyle positioning — not hardware specs.</div>
+  <div style="display:grid;grid-template-columns:1fr 44px 1fr;gap:0;margin-top:14px;align-items:stretch;">
+    <div class="card" style="border-top:3px solid var(--blue);">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--blue);">轨道 A · CRT</div>
+      <div style="font-size:14px;font-weight:700;margin-top:2px;">临床处方与医保驱动型</div>
+      <div style="font-size:10px;color:var(--ink2);margin-top:2px;">Sunrise Medical · Permobil · Quantum Rehab</div>
+      <ul class="b" style="margin-top:8px;">
+        <li>护城河 = 对 PT / OT / ATP 处方端的学术继续教育（CEU）+ DME 渠道网络 + 医保报销编码工具包</li>
+        <li>话语体系向生物力学与循证医学（EBM）靠拢（皮肤保护、剪切力消除等临床议题）</li>
+        <li>LinkedIn 主攻处方者与渠道商；IG / YouTube 以运动员大使网络输出品牌精神</li>
+      </ul>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--ink3);">VS</div>
+    <div class="card" style="border-top:3px solid #BF5AF2;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#BF5AF2;">轨道 B · MaaS</div>
+      <div style="font-size:14px;font-weight:700;margin-top:2px;">去医疗化智能消费品 + MaaS</div>
+      <div style="font-size:10px;color:var(--ink2);margin-top:2px;">WHILL（Model C2 / F / R）</div>
+      <ul class="b" style="margin-top:8px;">
+        <li>剥离「轮椅」残障标签，重新定义为 Personal EV（个人移动载具）</li>
+        <li>IG 用消费电子级极简视觉呈现咖啡厅 / 机场 / 展厅场景，吸引非截瘫的步行障碍人群</li>
+        <li>LinkedIn 转向智慧城市 B2B：LAX、迈阿密、希思罗等机场 L4 级自动驾驶轮椅商业化试点</li>
+      </ul>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;">
+    <div class="chip"><b style="font-size:10px;">Sunrise Medical</b><div style="font-size:9.5px;color:var(--ink2);margin-top:2px;">学术权威 + 多品牌矩阵（Quickie / RGK / Zippie / Leckey）</div></div>
+    <div class="chip"><b style="font-size:10px;">Permobil</b><div style="font-size:9.5px;color:var(--ink2);margin-top:2px;">循证医学 + 高阶定制（TiLite / ROHO / SmartDrive）</div></div>
+    <div class="chip"><b style="font-size:10px;">Pride / Quantum</b><div style="font-size:9.5px;color:var(--ink2);margin-top:2px;">银发消费级 × CRT 重症双轨切割（iLevel）</div></div>
+    <div class="chip"><b style="font-size:10px;">WHILL</b><div style="font-size:9.5px;color:var(--ink2);margin-top:2px;">去医疗化 Personal EV + MaaS 枢纽战略</div></div>
+  </div>
+  <div style="margin-top:10px;font-size:9.5px;color:var(--ink2);">交付物：8,000+ 字中文竞品复盘报告（飞书）→ 见附录 A1</div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>02 / 13</span></div>
+</section>
+
+<!-- ============ 03 竞品复盘（下） ============ -->
+<section class="slide" id="s3">
+  <div class="krow"><span class="kicker">Competitive Intelligence · II</span><span class="pno">03 / 13</span></div>
+  <h2>竞品复盘（下）：8–9 月动作拆解与 REHACARE 引爆</h2>
+  <div class="en">Aug–Sep Campaign Teardown — What the Big Four Actually Did</div>
+  <div style="display:grid;grid-template-columns:1.05fr 1fr;gap:16px;margin-top:12px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div class="card"><b style="font-size:11px;">Sunrise Medical</b>
+        <ul class="b" style="margin-top:5px;"><li>8 月全渠道展位预告，锁定 6 号馆核心展区；9.25 展首日宣布与荷兰 Scoozy 合作，全球首发 Sterling S800 户外跨界代步车（自行车式转向 + 50km 续航）</li><li>Leckey 发布 MyWay Pedal 儿童椭圆踏板，切入儿科物理治疗临床痛点</li></ul></div>
+      <div class="card"><b style="font-size:11px;">Permobil</b>
+        <ul class="b" style="margin-top:5px;"><li>宣布与 munevo 独家战略合作（法/意/瑞独家代理）；推广「智能眼镜微动作免手控导航」— ALS / MS / 高位截瘫用户仅凭头部微动操控轮椅</li><li>同步推出 Comfort Unite 模块化靠背支撑系统</li></ul></div>
+      <div class="card"><b style="font-size:11px;">Pride / Quantum</b>
+        <ul class="b" style="margin-top:5px;"><li>Pride：Facebook 银发社区温情内容 + Medicare Part B 报销指引</li><li>Quantum：「Life at iLevel」博客 + 老兵大使 Bryan Anderson 叙事，将器械升维为「平视世界」的平权工具</li></ul></div>
+      <div class="card"><b style="font-size:11px;">WHILL</b>
+        <ul class="b" style="margin-top:5px;"><li>LinkedIn 密集发布与 Envoy Air / American Airlines 及地服机构的机场自动驾驶试点数据</li><li>IG 维持消费电子级极简场景，彻底区隔传统医疗器械</li></ul></div>
+    </div>
+    <div>
+      <div class="tag">Social Posts · 2×2 实图</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
+        <div class="imgbox" style="height:118px;"><img src="images/competitor-sunrise-scoozy.png"></div>
+        <div class="imgbox" style="height:118px;"><img src="images/competitor-permobil-munevo.png"></div>
+        <div class="imgbox" style="height:118px;"><img src="images/competitor-quantum-ilevel.png"></div>
+        <div class="imgbox" style="height:118px;"><img src="images/competitor-whill-airport.png"></div>
+      </div>
+      <div class="cap">四巨头 8–9 月代表帖实图：Sunrise × Scoozy 官宣 / Permobil × munevo / Quantum iLevel / WHILL 机场试点</div>
+      <div style="margin-top:10px;font-size:10px;line-height:1.6;">
+        <b>提炼规律 → 输入 10 月行动</b><br>
+        ① 展会首日 = 新品/合作首发日，声量 48 小时内集中引爆；② 巨头以「临床循证 + 独家技术合作」构筑差异化，而非参数内卷；③ 大使叙事（Team Sunrise：15 国 39 名运动员）是可轻量复刻的长周期品牌资产。
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span style="text-transform:none;">方法论：品牌 × 平台 × 时间三维追踪表，逐周记录四平台发布</span><span>03 / 13</span></div>
+</section>
+
+<!-- ============ 04 展会营销 ============ -->
+<section class="slide" id="s4">
+  <div class="krow"><span class="kicker">Integrated Campaign</span><span class="pno">04 / 13</span></div>
+  <h2>一场展会怎么打：从 T-60 到 T+30</h2>
+  <div class="en">Trade-Show Campaign Model &amp; October Cross-Platform Content Calendar</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px;">
+    <div class="chip"><b style="font-size:10.5px;color:var(--blue);">LinkedIn</b> · B2B 学术权威<div style="font-size:9.5px;color:var(--ink2);margin-top:3px;">H.C.R. 参展官方公告、C-Family 技术平台解读；全球渠道合作进展（日本 Acalie / 法国 Ergo Concept）<br>频次：每周 1–2 更，长文 + 单图</div></div>
+    <div class="chip"><b style="font-size:10.5px;color:var(--blue);">Instagram</b> · 科技出行美学<div style="font-size:9.5px;color:var(--ink2);margin-top:3px;">C40 Air 碳纤维轻量场景图、E60 GT Pro 户外短片；展会倒计时 Story、新品局部悬念视觉<br>频次：每周 3–4 更，Reels 优先</div></div>
+    <div class="chip"><b style="font-size:10.5px;color:var(--blue);">Facebook</b> · 社区关怀互动<div style="font-size:9.5px;color:var(--ink2);margin-top:3px;">波士顿免费上门试驾招募（Free In-Home Trials）；用户温情故事、FAQ 答疑直播预告<br>频次：每周 2–3 更，重评论区运营</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;">
+    <div>
+      <div class="imgbox" style="height:104px;"><img src="images/campaign-teaser-ai.jpg"></div>
+      <div style="font-size:10px;font-weight:700;margin-top:6px;">T-60 ~ T-30 · 悬念预热</div>
+      <div style="font-size:9px;color:var(--ink2);line-height:1.45;">新品「神秘感」预热视觉（AI 生图剪影）；渠道商前置洽谈锁客</div>
+    </div>
+    <div>
+      <div class="imgbox" style="height:104px;"><img src="images/campaign-press-release.png"></div>
+      <div style="font-size:10px;font-weight:700;margin-top:6px;">T-14 ~ T-1 · 公关蓄能</div>
+      <div style="font-size:9px;color:var(--ink2);line-height:1.45;">英文新闻稿 → EIN Presswire 分发 → SEO/GEO 优化；KOL 邀约</div>
+    </div>
+    <div>
+      <div class="imgbox" style="height:104px;"><img src="images/campaign-booth-live.png"></div>
+      <div style="font-size:10px;font-weight:700;margin-top:6px;">T-Day · 现场引爆</div>
+      <div style="font-size:9px;color:var(--ink2);line-height:1.45;">展位实拍（REHACARE Hall 6 C43 96㎡ / H.C.R. 1-02-05）、新品首发、素材 24h 回传</div>
+    </div>
+    <div>
+      <div class="imgbox" style="height:104px;"><img src="images/campaign-recap-reel.png"></div>
+      <div style="font-size:10px;font-weight:700;margin-top:6px;">T+7 ~ T+30 · 长尾转化</div>
+      <div style="font-size:9px;color:var(--ink2);line-height:1.45;">评测视频二次剪辑分发；互动复盘；销售线索移交渠道商</div>
+    </div>
+  </div>
+  <div style="margin-top:12px;font-size:10px;color:var(--ink2);">排期原则：同一素材，三种叙事 — LinkedIn 讲「能力」，Instagram 讲「美学」，Facebook 讲「人情」。One asset, three narratives. ｜ 模型来源：四巨头 REHACARE 动作逆向拆解（见 P3）</div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>04 / 13</span></div>
+</section>
+
+<!-- ============ 05 KOL 管线 ============ -->
+<section class="slide" id="s5">
+  <div class="krow"><span class="kicker">Creator Growth · System</span><span class="pno">05 / 13</span></div>
+  <h2>用 AI 搭起来的法国 KOL 拓展管线</h2>
+  <div class="en">Heepsy Sourcing → GPT Scoring → Feishu CRM → Personalized Outreach</div>
+  <div style="margin-top:8px;font-size:10.5px;color:var(--ink2);">1,000+ 达人原始池 → GPT 智能体初筛分级 → 15+ 位深度核验 → 11 位核心垂直 KOL 建联 → Product-Exchange 置换合作推进</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;">
+    <div class="chip"><b style="font-size:10px;color:var(--blue);">STEP 1 · 抓取</b><b style="font-size:10.5px;display:block;margin-top:2px;">Heepsy 千级达人池</b><div style="font-size:9px;color:var(--ink2);line-height:1.45;margin-top:3px;">Heepsy + YouTube + Instagram 抓取法国达人原始数据；字段：粉丝量 / 互动率 / 地域 / 品类标签</div></div>
+    <div class="chip"><b style="font-size:10px;color:var(--blue);">STEP 2 · 初筛</b><b style="font-size:10.5px;display:block;margin-top:2px;">自定义 GPT 智能体打分</b><div style="font-size:9px;color:var(--ink2);line-height:1.45;margin-top:3px;">维度：场景契合度 / 受众画像 / 互动率 / 真实轮椅用户 / YouTube 长视频能力；自动标记「优先建联 / 明确不合适」</div></div>
+    <div class="chip"><b style="font-size:10px;color:var(--blue);">STEP 3 · 流转</b><b style="font-size:10.5px;display:block;margin-top:2px;">飞书多维表格 CRM</b><div style="font-size:9px;color:var(--ink2);line-height:1.45;margin-top:3px;">状态机：待建联 → 已发未回 → 意向跟进 → 合作落地；公开信息跨源核验，不做无依据推断</div></div>
+    <div class="chip"><b style="font-size:10px;color:var(--blue);">STEP 4 · 触达</b><b style="font-size:10.5px;display:block;margin-top:2px;">定制文案智能体</b><div style="font-size:9px;color:var(--ink2);line-height:1.45;margin-top:3px;">逐人生成个性化法文邮件 / DM，拒绝模板群发；人工复核语气与事实后发送</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:12px;margin-top:12px;">
+    <div>
+      <div class="imgbox" style="height:196px;"><img src="images/hero-kol-crm.png"></div>
+      <div class="cap"><b style="color:var(--blue);letter-spacing:.08em;">CRM SCREENSHOT</b> ｜ 飞书多维表格 KOL CRM 视图（邮箱打码）</div>
+    </div>
+    <div>
+      <div class="imgbox" style="height:196px;"><img src="images/creator-gpt-screening.png"></div>
+      <div class="cap"><b style="color:var(--blue);letter-spacing:.08em;">GPT SCREENSHOT</b> ｜ GPT 智能体初筛打分对话截图</div>
+    </div>
+  </div>
+  <div class="banner" style="margin-top:10px;font-size:10.5px;">合作原则沉淀（SOP 化）：产品置换为主 ｜ 多平台联发 ｜ 优先 INS 与品牌号联合发帖 ｜ 尊重达人内容自主权　—— 为什么用 AI 初筛而不是买名单？垂直医疗出行赛道，场景契合度 &gt; 粉丝量。</div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>05 / 13</span></div>
+</section>
+
+<!-- ============ 06 案例深拆 ============ -->
+<section class="slide" id="s6">
+  <div class="krow"><span class="kicker">Creator Growth · Case Study</span><span class="pno">06 / 13</span></div>
+  <h2>案例深拆：给一位残奥冲浪冠军写邀约</h2>
+  <div class="en">Personalized Outreach, Commission Negotiation &amp; Agency Compliance Review</div>
+  <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:14px;margin-top:12px;">
+    <div>
+      <div class="card" style="border-left:3px solid var(--blue);">
+        <div class="tag">案例 · @solangeb_</div>
+        <div style="font-size:13px;font-weight:700;margin-top:5px;">法国 Para Surf 冠军的「叙事定制」</div>
+        <ul class="b" style="margin-top:7px;">
+          <li><b>背景：</b>26.1K 粉（布列塔尼）；截瘫后投入 Para Surf，2024/2025 法国冠军、2025 欧洲冠军</li>
+          <li><b>切入策略：</b>刻意避开「重获自由」的陈旧叙事 — 她已有极强的运动主体性；改从「赛事旅行中的移动效率、装车、日常补充移动」切入</li>
+          <li><b>产品匹配：</b>首选 E80（15.9kg 碳纤维、两步折叠、航空友好）；品牌定位为「与运动、包容、真实移动场景一致的长期合作伙伴」</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-top:10px;background:#F8FBFF;border-left:3px solid var(--blue);">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--blue);">建联法文邮件节选（SUBJECT: PROPOSITION DE COLLABORATION – ROBOOTER × SOLANGE BALAY）</div>
+        <div style="font-size:10.5px;font-style:italic;line-height:1.6;margin-top:5px;color:var(--ink);font-family:Georgia,serif;">« L'idée n'est pas de remplacer votre mobilité habituelle, mais d'explorer dans quelles situations une solution électrique peut devenir un vrai complément : déplacements, voyages, compétitions ou vie quotidienne. »</div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--blue);">深入沟通难点与处理</div>
+        <ul class="b" style="margin-top:7px;">
+          <li><b>佣金商榷：</b>达人提出置换之外的佣金诉求 — 在置换框架内评估报价合理性，明确「可现场承诺 / 需上报决策」边界</li>
+          <li><b>合规审查：</b>专业应对法国经纪机构（如 W Sport Consulting）对企业法务资质、合作条款的严格核查，按公司流程提供资质文件</li>
+          <li><b>渠道协同：</b>与法国本土经销商 Ergo Concept 配合，推进 Product-Exchange 深度测评落地</li>
+          <li><b>安全红线：</b>XZ-Droid Smart 站立款对损伤节段不明的达人「不承诺适配」，邮件明确标注需专业确认</li>
+        </ul>
+      </div>
+      <div class="imgbox" style="height:172px;margin-top:10px;"><img src="images/creator-crm-feishu.png"></div>
+      <div class="cap"><b style="color:var(--blue);letter-spacing:.08em;">OUTREACH REPORT</b> ｜ 《France KOL Outreach Report》：11 位重点达人四段式档案，2026-09-02 核验</div>
+    </div>
+  </div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span style="text-transform:none;">达人建联的天花板不是法语语法，而是「你是否真的读过她的内容」</span><span>06 / 13</span></div>
+</section>
+
+<!-- ============ 07 EDM 体系 ============ -->
+<section class="slide" id="s7">
+  <div class="krow"><span class="kicker">DTC Retention · Architecture</span><span class="pno">07 / 13</span></div>
+  <h2>高客单硬件 DTC 自动化邮件体系（Shopify × Klaviyo）</h2>
+  <div class="en">Lifecycle EDM Architecture for a $2,000+ AOV Brand — No-Pressure Trust Journey</div>
+  <table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:9.8px;line-height:1.45;">
+    <thead><tr style="background:var(--paper);text-align:left;">
+      <th style="padding:7px 10px;border:1px solid var(--divider);width:15%;">Flow</th>
+      <th style="padding:7px 10px;border:1px solid var(--divider);width:13%;">触发条件</th>
+      <th style="padding:7px 10px;border:1px solid var(--divider);">核心策略</th>
+      <th style="padding:7px 10px;border:1px solid var(--divider);width:22%;">代表邮件</th>
+    </tr></thead>
+    <tbody>
+      <tr><td style="padding:7px 10px;border:1px solid var(--divider);"><b>Welcome Series</b><br>3 封</td><td style="padding:7px 10px;border:1px solid var(--divider);">即时 / 24h / 48h</td><td style="padding:7px 10px;border:1px solid var(--divider);">品牌理念（freedom &amp; independence，关照 user 与 caregiver）→ 选型辅导（E80 轻量旅行 vs E60 Pro 舒适性能，附 Compare Models）→ 信任集中释放（FDA / Trustpilot 4.3 / 质保退货 / 分期）</td><td style="padding:7px 10px;border:1px solid var(--divider);color:var(--blue);">Welcome to Robooter<br>Which Robooter Is Right for You?<br>Feel Confident Choosing Robooter</td></tr>
+      <tr><td style="padding:7px 10px;border:1px solid var(--divider);"><b>Browse Abandonment</b><br>3 封</td><td style="padding:7px 10px;border:1px solid var(--divider);">6h / 24h</td><td style="padding:7px 10px;border:1px solid var(--divider);">通用召回 → 按浏览行为分品（E60 Pro / E80 独立邮件）：路测视频 + WHILL C2 横评 + 第三方真实测评 + Zendesk 说明书库</td><td style="padding:7px 10px;border:1px solid var(--divider);color:var(--blue);">Still Exploring?<br>Thinking about the E60 Pro?</td></tr>
+      <tr><td style="padding:7px 10px;border:1px solid var(--divider);"><b>Abandoned Cart</b><br>2 封</td><td style="padding:7px 10px;border:1px solid var(--divider);">4h / +24–36h</td><td style="padding:7px 10px;border:1px solid var(--divider);">轻提醒（Return to Cart + 基础保障）→ 顾虑攻坚（质保 / 退货 / 分期 / 电话客服 + Trustpilot 评价）</td><td style="padding:7px 10px;border:1px solid var(--divider);color:var(--blue);">Still Thinking It Over?<br>Need Any Help Deciding?</td></tr>
+      <tr><td style="padding:7px 10px;border:1px solid var(--divider);"><b>Abandoned Checkout</b><br>2 封</td><td style="padding:7px 10px;border:1px solid var(--divider);">2–4h / +24h</td><td style="padding:7px 10px;border:1px solid var(--divider);">订单确认（免邮 / 预计配送 / 30 天退货 / 分期）→ Kevin 真人纯文本邮件（无设计、无促销，像朋友一样问一句）</td><td style="padding:7px 10px;border:1px solid var(--divider);color:var(--blue);">Complete Your Order<br>Need Help With Your Order?</td></tr>
+    </tbody>
+  </table>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+    <div class="chip" style="border-left:3px solid #D70015;"><b style="font-size:10.5px;">快消式 EDM ✕（竞品范式）</b><div style="font-size:9.5px;color:var(--ink2);margin-top:3px;">折扣递增（$50→$80）+ 倒计时逼单 + 大 Banner 促销 — 拆解自 HIMIWAY / Aventon / TENWAYS 全流</div></div>
+    <div class="chip" style="border-left:3px solid var(--st,#248A3D);border-left-color:#248A3D;"><b style="font-size:10.5px;">高客单硬件 EDM ✓（我的重构）</b><div style="font-size:9.5px;color:var(--ink2);margin-top:3px;">① 信任背书替代打折 ② Compare Models / 横评 / 测评等决策工具前置 ③ 每条流末封真人兜底（直邮 / +1 (888) 668-9894）</div></div>
+  </div>
+  <div style="margin-top:10px;font-size:9.5px;color:var(--ink2);">完整竞品 EDM 拆解表 → 附录 A1 ｜ 方法论：先拆解成熟范式，再谈重构</div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>07 / 13</span></div>
+</section>
+
+<!-- ============ 08 邮件 UI/UX ============ -->
+<section class="slide" id="s8">
+  <div class="krow"><span class="kicker">DTC Retention · Craft</span><span class="pno">08 / 13</span></div>
+  <h2>邮件 UI/UX 视觉重塑与信任动线六层</h2>
+  <div class="en">Trust-First Hierarchy · Liquid Personalization · Template Re-engineering on Klaviyo</div>
+  <div style="display:grid;grid-template-columns:1.1fr .95fr 235px 128px;gap:12px;margin-top:10px;">
+    <div>
+      <div class="tag">倒金字塔信任动线 L1 → L6</div>
+      <ul class="b" style="margin-top:7px;">
+        <li><b>L1 Hero 共鸣层：</b>生活场景大图 +「More Freedom. More Ways to Move.」，不放折扣</li>
+        <li><b>L2 卖点层：</b>全向轮越障 / 全天舒适 / FDA 认证 / App 遥控（≤4 条）</li>
+        <li><b>L3 信任层：</b>FDA-cleared 徽章 + Trustpilot 4.3★ +「1-Year Warranty · 30-Day Returns · Free Shipping」图标条</li>
+        <li><b>L4 决策层：</b>WHILL C2 横评 + 真实用户测评 + Zendesk 说明书库</li>
+        <li><b>L5 减压层：</b>Financing 分期模块，把 $2,000+ 拆解为月供心理账户</li>
+        <li><b>L6 真人层：</b>「No sales pressure at all」+ 直邮 + 888 电话 + 回复邮件</li>
+      </ul>
+      <div style="font-size:10px;font-weight:700;margin-top:6px;">文案语气准则</div>
+      <div style="font-size:9.5px;color:var(--ink2);line-height:1.5;">「Choosing a mobility device is a big decision」共情开场，承认决策重量；信任事实化：所有背书给可点击证据；关照 user 与 caregiver 双阅读角色。</div>
+    </div>
+    <div>
+      <div class="tag">Liquid 动态化</div>
+      <div class="mono" style="background:#1D1D1F;color:#7EE787;border-radius:8px;padding:10px;font-size:8.6px;line-height:1.6;margin-top:7px;">{% comment %} one flow serves<br>&nbsp;&nbsp;the whole SKU line {% endcomment %}<br>Hi {{ first_name|default:'there' }},<br>{% for item in event.extra.line_items %}<br>&nbsp;&nbsp;{{ item.product.title }} —<br>&nbsp;&nbsp;{{ item.price | money }}<br>{% endfor %}</div>
+      <div style="font-size:9.5px;color:var(--ink2);line-height:1.5;margin-top:7px;">设计原则：信任状的位置 = 用户焦虑出现的位置。FDA 徽章不放页脚，放在用户第一次问「这靠谱吗」的视区。</div>
+      <div class="imgbox" style="height:150px;margin-top:8px;"><img src="images/edm-welcome-3-mobile.png"></div>
+      <div class="cap">Welcome 系列信任邮件 · 手机端渲染</div>
+    </div>
+    <div>
+      <div class="imgbox" style="height:436px;"><img src="images/edm-klaviyo-flow-canvas.png"></div>
+      <div class="cap"><b style="color:var(--blue);letter-spacing:.08em;">EMAIL RENDER</b> ｜ 邮件手机端渲染长图（Checkout 兜底封全图）</div>
+    </div>
+    <div>
+      <div class="tag">Flow Canvas 结构</div>
+      <div style="margin-top:8px;font-size:9px;line-height:1.4;">
+        <div class="chip" style="margin-bottom:6px;text-align:center;"><b>触发器</b><br>Cart / Checkout 事件</div>
+        <div style="text-align:center;color:var(--ink3);">↓</div>
+        <div class="chip" style="margin-bottom:6px;text-align:center;"><b>时间延迟</b><br>4h / 24h / 36h</div>
+        <div style="text-align:center;color:var(--ink3);">↓</div>
+        <div class="chip" style="margin-bottom:6px;text-align:center;"><b>邮件节点</b><br>轻提醒 → 顾虑攻坚 → 真人兜底</div>
+        <div style="text-align:center;color:var(--ink3);">↓</div>
+        <div class="chip" style="text-align:center;"><b>目标</b><br>Complete Your Order</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>08 / 13</span></div>
+</section>
+
+<!-- ============ 09 独立站 PR & SEO ============ -->
+<section class="slide" id="s9">
+  <div class="krow"><span class="kicker">Web Ops · PR &amp; Search</span><span class="pno">09 / 13</span></div>
+  <h2>独立站商品企划 + 全域公关分发 + SEO/GEO</h2>
+  <div class="en">Shopify Merchandising Ops · EIN Presswire Distribution · SEO + GEO Dual-Engine</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;">
+    <div class="card">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--blue);">站内 · Merchandising Ops</div>
+      <div style="font-size:12px;font-weight:700;margin-top:4px;">旧品退市（Sunset）资产归档 SOP</div>
+      <ul class="b" style="margin-top:7px;">
+        <li>六项归档清单：产品图片 / 核心文案 / 卖点层级 / 说明书与合规 PDF / 视频 / SEO Title &amp; Meta Description</li>
+        <li>保留产品数字基线，保护旧链接在 Google 的 SEO 资产权重 — SKU 退市 ≠ 数字资产清零</li>
+        <li>新品上线：AI 辅助高转化 PDP 英文文案 + 定制 AI 生图流场景视觉，详情页重构</li>
+      </ul>
+      <div style="display:flex;gap:6px;margin-top:9px;flex-wrap:wrap;">
+        <span class="tag">产品图片</span><span class="tag">核心文案</span><span class="tag">卖点层级</span><span class="tag">合规 PDF</span><span class="tag">视频</span><span class="tag">SEO Meta</span>
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--blue);">站外 · PR &amp; Search（配图：双通稿首屏实图）</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
+        <div class="imgbox" style="height:104px;"><img src="images/pr-rehacare-2026.png"></div>
+        <div class="imgbox" style="height:104px;"><img src="images/pr-hcr-2026.png"></div>
+      </div>
+      <div class="cap" style="text-align:left;">REHACARE 2026（连续五年参展 · Hall 6 Booth C43）× H.C.R. 2026（连续三年参展 · C-Family 日本首发 · Booth 1-02-05）英文通稿首屏</div>
+      <ul class="b" style="margin-top:7px;">
+        <li><b>EIN Presswire 商业分发：</b>获取权威媒体收录与高权重反向外链，反哺独立站域名权重（媒体收录见附录 A2-7）</li>
+        <li><b>SEO 传统引擎：</b>关键词 / 结构化标题 / 内外链 / SERP 排名</li>
+        <li><b>GEO 生成式引擎：</b>结构化事实 / 清晰实体声明 / 可引用数据点 — 适配 ChatGPT · Perplexity 引用习惯</li>
+      </ul>
+    </div>
+  </div>
+  <div class="banner" style="margin-top:12px;font-size:10.5px;">认知：独立站运营的本质是「数字资产的复利管理」；2026 年的搜索优化，一半写给 Google 爬虫，一半写给 AI 的引用引擎。　新闻稿全文 → 附录 A2</div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>09 / 13</span></div>
+</section>
+
+<!-- ============ 10 AIGC & LangOps ============ -->
+<section class="slide" id="s10">
+  <div class="krow"><span class="kicker">AIGC Creative &amp; LangOps</span><span class="pno">10 / 13</span></div>
+  <h2>AI 生图、一稿多面与三审交付</h2>
+  <div class="en">AI Image Pipeline · Platform-Native Copy · Three-Pass EN/FR/JP Delivery</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px;">
+    <div class="card"><b style="font-size:11px;">① AIGC 场景图降本</b>
+      <ul class="b" style="margin-top:6px;"><li>定制 AI 生图 Skill 与 Prompt 库：锁定「欧美面孔 × 中产社区街道 × 自然光」风格基线</li><li>批量产出候选，替代单次数千美元的海外模特外拍</li><li>10 月展会新品「保持神秘感」预热视觉（剪影 / 局部 / 光影）</li><li>波士顿试驾海报 4 版全部 AI 生成（红砖街区 / 联排住宅在地化场景）</li></ul></div>
+    <div class="card"><b style="font-size:11px;">② 一稿多面 · 平台差异化文案</b>
+      <ul class="b" style="margin-top:6px;"><li><b>Instagram：</b>极简美学 — 𝗙𝗥𝗘𝗘 𝗜𝗡-𝗛𝗢𝗠𝗘 𝗧𝗥𝗜𝗔𝗟𝗦 𝗜𝗡 𝗕𝗢𝗦𝗧𝗢𝗡 + 短句 + 年轻标签组</li><li><b>Facebook：</b>长者家庭温情 —「If you—or someone you care for—」照护者共情句式 + NO COST. NO OBLIGATION.</li><li><b>运营细节：</b>产品链接放首条评论，主帖保留邮箱 CTA</li></ul></div>
+    <div class="card"><b style="font-size:11px;">③ 术语库 + 三审交付流</b>
+      <ul class="b" style="margin-top:6px;"><li>REHACARE 展会 PPT 与折页（医疗出行术语密集）</li><li>行业术语库预设 → AI+Skill 初译 → 个人英法双语专家校审（专八/法语专四/CATTI III）→ 日语外部母语团队合规质检</li><li>AI 提效降本 × 国际官方物料零失误</li></ul></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-top:12px;">
+    <div>
+      <div class="tag">AI Posters · 波士顿试驾海报 4 版实图</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px;">
+        <div class="imgbox" style="height:150px;"><img src="images/poster-boston-01-outdoor.jpg"></div>
+        <div class="imgbox" style="height:150px;"><img src="images/poster-boston-02-rowhouse.jpg"></div>
+        <div class="imgbox" style="height:150px;"><img src="images/poster-boston-03-redbrick-a.jpg"></div>
+        <div class="imgbox" style="height:150px;"><img src="images/poster-boston-04-redbrick-b.jpg"></div>
+      </div>
+      <div class="cap">波士顿 AI 海报 · 绿树户外 / 联排住宅 / 红砖街道 ×2 ｜ 角标「AI Generated · Prompt 调优 N 轮」</div>
+    </div>
+    <div>
+      <div class="tag">Copy &amp; Flow · 三审交付流</div>
+      <div style="margin-top:8px;font-size:9.5px;line-height:1.4;">
+        <div class="chip" style="margin-bottom:5px;text-align:center;"><b>行业术语库预设</b></div>
+        <div style="text-align:center;color:var(--ink3);">↓</div>
+        <div class="chip" style="margin-bottom:5px;text-align:center;"><b>AI + Skill 初译</b></div>
+        <div style="text-align:center;color:var(--ink3);">↓</div>
+        <div class="chip" style="margin-bottom:5px;text-align:center;"><b>英法双语专家校审</b><br>专八 / 法语专四 / CATTI III</div>
+        <div style="text-align:center;color:var(--ink3);">↓</div>
+        <div class="chip" style="text-align:center;"><b>日语外部母语质检</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span style="text-transform:none;">人机协同原则：AI 做「生成与初筛」，人做「判断与背书」。知道 AI 的边界（日语交付母语质检），比会用 AI 更重要。</span><span>10 / 13</span></div>
+</section>
+
+<!-- ============ 11 复盘 & 联系 ============ -->
+<section class="slide" id="s11">
+  <div class="krow"><span class="kicker">Retrospective &amp; Contact</span><span class="pno">11 / 13</span></div>
+  <h2>实习复盘：三件真正重要的事</h2>
+  <div class="en">What I Learned, What I'd Do Differently — Let's Talk</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;">
+    <div class="card"><div style="font-size:16px;font-weight:700;color:var(--blue);">01</div><div style="font-size:12px;font-weight:700;margin-top:4px;">工具放大执行力，但业务判断是天花板</div><div style="font-size:10px;color:var(--ink2);line-height:1.55;margin-top:5px;">GPT 智能体能十分钟筛完 1,000 个达人，但「@solangeb_ 不能用重获自由叙事」这类判断，只能来自对达人内容的真实精读 — AI 省下的时间，我用来读得更深。</div></div>
+    <div class="card"><div style="font-size:16px;font-weight:700;color:var(--blue);">02</div><div style="font-size:12px;font-weight:700;margin-top:4px;">高客单转化的本质是信任工程，不是流量工程</div><div style="font-size:10px;color:var(--ink2);line-height:1.55;margin-top:5px;">$2,000 的决策里，FDA 徽章的位置比折扣码的大小重要得多；每个触点都要回答「我凭什么信你」。</div></div>
+    <div class="card"><div style="font-size:16px;font-weight:700;color:var(--blue);">03</div><div style="font-size:12px;font-weight:700;margin-top:4px;">本地化不是翻译，是商业习惯的重建</div><div style="font-size:10px;color:var(--ink2);line-height:1.55;margin-top:5px;">法国达人的佣金商榷与法务审查让我意识到：出海的颗粒度最终落在「懂不懂当地的生意怎么做」— 语言证书只是入场券。</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:14px;">
+    <div class="card">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--blue);">能力雷达（自评留有余地，成长空间即入职价值）</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;margin-top:8px;font-size:11px;line-height:1.9;">
+        <div>竞品洞察与策略拆解 <span style="color:var(--blue);letter-spacing:2px;">★ ★ ★ ★</span></div>
+        <div>KOL 开发与商务谈判 <span style="color:var(--blue);letter-spacing:2px;">★ ★ ★ ☆</span></div>
+        <div>DTC 独立站运营 <span style="color:var(--blue);letter-spacing:2px;">★ ★ ★ ☆</span></div>
+        <div>EDM 自动化与文案 <span style="color:var(--blue);letter-spacing:2px;">★ ★ ★ ★</span></div>
+        <div>英法双语内容创作 <span style="color:var(--blue);letter-spacing:2px;">★ ★ ★ ★</span></div>
+        <div>AI 工作流搭建 <span style="color:var(--blue);letter-spacing:2px;">★ ★ ★ ★</span></div>
+      </div>
+    </div>
+    <div class="card" style="background:var(--ink);color:#fff;border:none;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.6);">求职方向（2027 届硕士 · 上海）</div>
+      <div style="font-size:12px;line-height:1.7;margin-top:6px;">海外达人营销 / KOL 运营 / 海外社媒运营 / 跨境电商与独立站运营</div>
+      <div style="font-size:11px;line-height:1.8;margin-top:8px;">邮箱 <b>sallygong310@gmail.com</b><br>电话 <b>(+86) 173-6170-8913</b></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;font-size:10.5px;color:var(--ink2);">Thanks for reading — full evidence appendix follows (A1–A2). I'd love to walk you through any page in person.</div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>11 / 13</span></div>
+</section>
+
+<!-- ============ 12 附录 A1 ============ -->
+<section class="slide" id="s12">
+  <div class="krow"><span class="kicker">Supplementary Evidence · I</span><span class="pno">12 / 13</span></div>
+  <h2>附录 A1：数据证据库</h2>
+  <div class="en">CRM · Competitive EDM Benchmark · Outreach Report · Flow Build Sheet — feel free to skip or dive in</div>
+  <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:14px;margin-top:12px;">
+    <div>
+      <div class="tag">Exhibit A1-1 · KOL CRM 全表</div>
+      <div class="imgbox" style="height:250px;margin-top:8px;"><img src="images/hero-kol-crm.png"></div>
+      <div class="cap" style="text-align:left;">飞书多维表格完整视图：15+ 位法国达人，列含粉丝数 / 地域 / 内容分类 / 当前状态 / 推荐触达渠道 / 首选产品方向（邮箱打码）。状态机：待建联 → 已发未回 → 意向跟进 → 合作落地</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div class="card"><div class="tag">Exhibit A1-2 · 竞品 EDM 梳理表</div><div style="font-size:10px;color:var(--ink2);line-height:1.55;margin-top:5px;">HIMIWAY（45 行全生命周期流）/ Aventon / TENWAYS 三表切片。拆解维度：触发条件 / 发送频次 / 折扣梯度 / 站内承接 / 标题与预览文案</div></div>
+      <div class="card"><div class="tag">Exhibit A1-3 · Outreach Report 目录页</div><div style="font-size:10px;color:var(--ink2);line-height:1.55;margin-top:5px;">《Robooter France KOL Outreach Report》目录 + 产品定位速览表（E80 / E60 GT Pro / XZ-Droid Smart 合作池判断）— 证明研究方法的系统性（封面见 P6）</div></div>
+      <div class="card"><div class="tag">Exhibit A1-4 · Flow 搭建表</div><div style="font-size:10px;color:var(--ink2);line-height:1.55;margin-top:5px;">《EDM FLOW搭建.xlsx》完整切片：四 Flow 触发条件 / 核心主题 / 链接资产（About Us / Comparison / FDA / Trustpilot / Zendesk）全览</div></div>
+      <div style="font-size:9.5px;color:var(--ink3);">All artifacts produced during Robooter internship, Aug–Oct 2026.</div>
+    </div>
+  </div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>APPENDIX A1 / 13</span></div>
+</section>
+
+<!-- ============ 13 附录 A2 ============ -->
+<section class="slide" id="s13">
+  <div class="krow"><span class="kicker">Supplementary Evidence · II</span><span class="pno">13 / 13</span></div>
+  <h2>附录 A2：视觉素材库</h2>
+  <div class="en">AI Posters · Email Renders · Press Releases &amp; Distribution Proof</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;">
+    <div><div class="tag">A2-1</div><div class="imgbox" style="height:118px;margin-top:6px;"><img src="images/poster-boston-01-outdoor.jpg"></div><div class="cap">波士顿 AI 海报 · 绿树户外版<br>Prompt：Boston suburb, natural light, senior lifestyle</div></div>
+    <div><div class="tag">A2-2</div><div class="imgbox" style="height:118px;margin-top:6px;"><img src="images/poster-boston-02-rowhouse.jpg"></div><div class="cap">波士顿 AI 海报 · 联排住宅版<br>角标：AI Generated · Prompt 调优 N 轮</div></div>
+    <div><div class="tag">A2-3</div><div class="imgbox" style="height:118px;margin-top:6px;"><img src="images/poster-boston-03-redbrick-a.jpg"></div><div class="cap">波士顿 AI 海报 · 红砖街道版 ×2<br>在地化场景一眼可辨（A/B 两版）</div></div>
+    <div><div class="tag">A2-4</div><div class="imgbox" style="height:118px;margin-top:6px;"><img src="images/edm-welcome-3-mobile.png" style="object-position:top;"></div><div class="cap">邮件长图：Welcome 信任封<br>手机端渲染 · 「Support that stays with you」</div></div>
+    <div><div class="tag">A2-5</div><div class="imgbox" style="height:118px;margin-top:6px;"><img src="images/edm-browse-recall-mobile.png"></div><div class="cap">邮件长图：购物车召回<br>Financing + FDA + Trustpilot 信任动线</div></div>
+    <div style="grid-column:span 2;"><div class="tag">A2-6</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px;">
+      <div class="imgbox" style="height:118px;"><img src="images/pr-rehacare-2026.png"></div>
+      <div class="imgbox" style="height:118px;"><img src="images/pr-hcr-2026.png"></div>
+    </div><div class="cap">新闻稿双拼：REHACARE 2026（Hall 6 C43）× H.C.R. 2026（C-Family 日本首发）英文稿首屏</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+    <div class="card"><div class="tag">A2-7 · EIN Presswire 分发 / 收录证明</div><div style="font-size:10px;color:var(--ink2);line-height:1.55;margin-top:5px;">媒体收录与转载页切片（含日本市场導入事例报道）· 角标「SEO + GEO 双优化」— 权威外链反哺独立站域名权重</div></div>
+    <div style="background:var(--ink);color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+      <div style="text-align:center;"><div style="font-size:14px;font-weight:700;">END OF PORTFOLIO — THANK YOU</div><div style="font-size:9.5px;color:rgba(255,255,255,.6);margin-top:4px;">SALLY GONG × ROBOOTER PORTFOLIO · APPENDIX A2 / 13</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>SALLY GONG × ROBOOTER PORTFOLIO</span><span>APPENDIX A2 / 13</span></div>
+</section>
+
+</body>
+</html>
